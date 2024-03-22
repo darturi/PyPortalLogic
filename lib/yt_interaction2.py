@@ -123,7 +123,7 @@ def create_populate_yt_playlist(link, playlist_title, playlist_description="", p
 
 def main():
     playlist_link = "https://open.spotify.com/playlist/1CWuCxneZ9R32IseMQe9JO?si=520f8b6d9f714427"
-    create_populate_yt_playlist(playlist_link, "test4")
+    create_populate_yt_playlist(playlist_link, "test5")
 
 
 main()
