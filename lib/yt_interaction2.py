@@ -115,26 +115,15 @@ def create_populate_yt_playlist(link, playlist_title, playlist_description="", p
         track_name, artist_name, album_name = song_info['track_name'], song_info['artist'], song_info['album_name']
         song_id = find_song(yt, track_name, artist_name, album_name)
         yt.add_playlist_items(playlist_obj, [song_id['videoId']])
-        print(song_id)
 
+    # return link to the playlist
+    yt_playlist_url_header = "https://music.youtube.com/playlist?list="
+    return yt_playlist_url_header + playlist_obj
 
 
 def main():
-    yt = YTMusic('oauth.json')
-
-    env = Env()
-    env.read_env()
-
-    title = "Wonderwall"
-    artist = "Oasis"
-    album = "(What's The Story) Morning Glory? (Deluxe Remastered Edition)"
     playlist_link = "https://open.spotify.com/playlist/1CWuCxneZ9R32IseMQe9JO?si=520f8b6d9f714427"
-    # playList = create_yt_playlist(yt, "test2")
-
-    # print(fetch_playlist_songs(playlist_link, env))
-
-    # print(find_song(yt, title, artist, album))
-    create_populate_yt_playlist(playlist_link, "test3")
+    create_populate_yt_playlist(playlist_link, "test4")
 
 
 main()
